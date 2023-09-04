@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".sqc">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            app:maskColor="#45CA2C2C"
+            app:frameColor="#ee6161"
+            app:flashButtonColor="#ffffff"
+            app:autoFocusButtonColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameLayout"
+        android:layout_alignStart="@id/frameLayout"
+        android:layout_alignEnd="@id/frameLayout"
+        android:layout_marginTop="20dp"
+        android:text="Text shown here"
+        android:textAlignment="center"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/buttonview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@id/textView"
+        android:layout_alignEnd="@id/textView"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="5dp"
+        android:text="Click to ReCapture"
+        android:textAlignment="center"
+        android:textSize="24dp" />
+
+</RelativeLayout>
